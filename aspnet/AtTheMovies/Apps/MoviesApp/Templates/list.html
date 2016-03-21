@@ -1,0 +1,34 @@
+﻿<div>
+
+    <div class="alert alert-danger" ng-show="list.reason.data.message">
+        {{ list.reason.data.message }}
+    </div>
+
+    <table class="table">
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Rating</th>
+        </tr>
+        <tr ng-repeat="movie in list.movies"
+            ng-class="list.rate(movie)">
+
+            <td>
+                {{movie.title }}
+            </td>
+            <td>{{movie.year}}</td>
+            <td>
+                {{movie.rating}}
+                <button class="btn bnt-default" ng-click="list.increaseRating(movie)">
+                    <span class="glyphicon glyphicon-arrow-up"></span>
+                </button>
+                <button class="btn bnt-default" ng-click="list.decreaseRating(movie)">
+                    <span class="glyphicon glyphicon-arrow-down"></span>
+                </button>
+                <a class="btn btn-default" href="#/details/{{movie.id}}">
+                    <span class="glyphicon glyphicon-zoom-in"></span>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,12 @@
+[ng-cloak] {
+    display: none;
+}
+
+.good {
+    background-color: green;
+    font-weight: bold;
+}
+
+.bad {
+    background-color: red;
+}
