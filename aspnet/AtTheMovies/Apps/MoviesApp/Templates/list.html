@@ -19,13 +19,13 @@
             <td>{{movie.year}}</td>
             <td>
                 {{movie.rating}}
-                <button class="btn bnt-default" ng-click="list.increaseRating(movie)">
+                <button class="btn btn-default" ng-click="list.increaseRating(movie)">
                     <span class="glyphicon glyphicon-arrow-up"></span>
                 </button>
-                <button class="btn bnt-default" ng-click="list.decreaseRating(movie)">
+                <button class="btn btn-default" ng-click="list.decreaseRating(movie)">
                     <span class="glyphicon glyphicon-arrow-down"></span>
                 </button>
-                <a class="btn btn-default" href="#/details/{{movie.id}}">
+                <a class="btn btn-default" ng-href="#/details/{{movie.id}}">
                     <span class="glyphicon glyphicon-zoom-in"></span>
                 </a>
             </td>
