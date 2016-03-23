@@ -94,13 +94,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Apps\MoviesApp\Controllers\AboutController.js" />
+    <Content Include="Apps\MoviesApp\Controllers\MovieEditController.js" />
     <Content Include="Apps\MoviesApp\Controllers\MovieDetailsController.js" />
     <Content Include="Apps\MoviesApp\Controllers\MovieListController.js" />
     <Content Include="Apps\MoviesApp\Controllers\ShellController.js" />
     <Content Include="Apps\MoviesApp\module.js" />
     <Content Include="Apps\MoviesApp\Services\MovieRepository.js" />
+    <Content Include="Apps\MoviesApp\Specs\runner.html" />
+    <Content Include="Apps\MoviesApp\Templates\about.html" />
     <Content Include="Apps\MoviesApp\Templates\details.html" />
+    <Content Include="Apps\MoviesApp\Templates\edit.html" />
     <Content Include="Apps\MoviesApp\Templates\list.html" />
+    <Content Include="Apps\MoviesApp\Templates\thingDetail.component.html" />
     <Content Include="Content\ajax-loader.gif" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap\css\bootstrap-theme.css" />
@@ -112,6 +118,7 @@
     <Content Include="default.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="karma.conf.js" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-aria.js" />
     <Content Include="Scripts\angular-cookies.js" />
@@ -127,6 +134,7 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\jasmine\boot.js" />
     <Content Include="Scripts\jasmine\jasmine-html.js" />
+    <Content Include="Apps\MoviesApp\Specs\jasminetest.spec.js" />
     <Content Include="Scripts\jasmine\jasmine.css" />
     <Content Include="Scripts\jasmine\jasmine.js" />
     <Content Include="Scripts\jasmine\jasmine_favicon.png" />

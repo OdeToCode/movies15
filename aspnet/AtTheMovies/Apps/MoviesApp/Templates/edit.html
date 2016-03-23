@@ -1,0 +1,32 @@
+﻿<div>
+    <h3>Editing {{edit.movie.title}}</h3>
+
+  
+    <form name="edit.form" ng-submit="edit.save()">
+
+        {{edit.form.$valid }}
+
+        <div class="form-group">
+            <label>Title</label>
+            <input name="title" type="text" ng-model="edit.movie.title"
+                   required maxlength="100"
+                   class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label>Rating</label>
+            <input type="number"  name="rating" ng-model="edit.movie.rating" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <input type="submit" name="name" value="Save!" class="btn btn-primary"/>
+            <a class="btn btn-danger" ng-click="edit.reset()">Reset</a>            
+        </div>
+
+    </form>
+
+    <pre>
+    {{ edit.form | json }}
+    </pre>
+
+</div>

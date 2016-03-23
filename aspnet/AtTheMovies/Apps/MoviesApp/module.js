@@ -1,10 +1,5 @@
 ﻿var module = angular.module("moviesApp", ["ngRoute"]);
 
-// http://server.com/movies/list
-// http://servercom/movies/details/3
-
-
-
 
 module.config(function ($routeProvider) {
     $routeProvider.when("/list",
@@ -17,11 +12,18 @@ module.config(function ($routeProvider) {
                 }   
             }
         })
-                  .when("/about", { template: "<div>This is the about page</div>" })
+                  .when("/about", {
+                      templateUrl: "/apps/moviesapp/templates/about.html",
+                      controller: "AboutController as about"
+                  })
                   .when("/details/:id", {
                       templateUrl: "/apps/moviesapp/templates/details.html",
                       controller: "MovieDetailsController as detail"
-                    })
+                  })
+                .when("/edit/:id", {
+                    templateUrl: "/apps/moviesapp/templates/edit.html",
+                    controller: "MovieEditController as edit"
+                })
                   .otherwise({ redirectTo: "/list" });
 
 });

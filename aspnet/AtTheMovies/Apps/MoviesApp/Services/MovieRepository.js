@@ -3,7 +3,7 @@
     var module = angular.module("moviesApp");
 
 
-    var MovieRespository = function ($http) {
+    var MovieRespository = function ($http, $q) {
 
         var baseUrl = "http://localhost:13467/api/movies/";
        
@@ -12,16 +12,31 @@
             return $http.get(baseUrl + id).then(function(response) { return response.data });
         }
 
+        var movies = null;
         var getAll = function () {
+
+            if (movies) {
+                return $q.when(movies);
+            }
+
             return $http.get(baseUrl)
-                        .then(function(response) {
+                        .then(function (response) {
+                            //movies = response.data;
                             return response.data;
                         });
         };
 
+        var update = function(movie) {
+            return $http.put(baseUrl, movie)
+                .then(function(response) {
+                    return response.data;
+                });
+        };
+
         return {
             getAll: getAll,
-            getById: getById
+            getById: getById,
+            update: update
         };
     }
 

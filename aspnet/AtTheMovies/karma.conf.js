@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Thu Mar 19 2015 09:51:32 GMT+0100 (Central Europe Standard Time)
+// Generated on Tue Mar 22 2016 16:32:03 GMT-0400 (Eastern Daylight Time)
 
 module.exports = function(config) {
   config.set({
@@ -15,22 +15,12 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        "./scripts/angular.js",
-        "./scripts/angular-route.js",
-        "./scripts/angular-animate.js",
-        "./scripts/angular-sanitize.js",
-        "./scripts/angular-messages.js",
-        "./scripts/angular-mocks.js",
-
-        "./apps/common/module.js",
-        "./apps/common/js/**/*.js*",
-        "./apps/AtTheMovies/module.js",
-        "./apps/AtTheMovies/js/**/*.js",
-
-        "./apps/AtTheMovies/specs/**/*.js"
-
-
+         "Scripts/angular.js",
+         "Scripts/angular-route.js",
+         "Apps/MoviesApp/module.js",
+         "Apps/MoviesApp/**/*.js"
     ],
+
 
     // list of files to exclude
     exclude: [
@@ -73,6 +63,10 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
-  });
-};
+    singleRun: false,
+
+    // Concurrency level
+    // how many browser should be started simultaneous
+    concurrency: Infinity
+  })
+}

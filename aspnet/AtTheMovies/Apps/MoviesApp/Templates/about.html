@@ -1,0 +1,19 @@
+﻿<h3>Dynamically Adding Things</h3>
+
+<thing-detail ng-repeat="thing in about.things" thing="thing" remove="about.remove(thing)"></thing-detail>
+
+<form ng-submit="about.saveThing()">
+    Add a new thing:
+    <div>
+        <label>Title</label>
+        <input type="text" ng-model="about.editThing.title" />
+    </div>
+
+    <div>
+        <label>Rating</label>
+        <input type="number" ng-model="about.editThing.rating" />
+    </div>
+
+    <input type="submit" value="Save" class="btn btn-default" />
+
+</form>

@@ -9,10 +9,10 @@
 
     <div class="container-fluid">
         <div class="navbar navbar-inverse">
-            <div class="navbar-brand">
+            <div class="nav navbar-brand">
                 <a href="#/list">Home</a>
             </div>
-            <ul class="navbar-nav">
+            <ul class="nav navbar-nav">
                 <li><a href="#/list">List</a></li>
                 <li><a href="#/about">About</a></li>
             </ul>
@@ -29,6 +29,9 @@
             </div>
             <div class="col-md-4">
 
+                {{ shell.counter }}
+                <button ng-click="doWork()">Do Work</button>
+
             </div>
         </div>
 
@@ -41,6 +44,8 @@
     <script src="Apps/MoviesApp/Services/MovieRepository.js"></script>
     <script src="Apps/MoviesApp/Controllers/ShellController.js"></script>
     <script src="Apps/MoviesApp/Controllers/MovieDetailsController.js"></script>
+    <script src="Apps/MoviesApp/Controllers/MovieEditController.js"></script>
+    <script src="Apps/MoviesApp/Controllers/AboutController.js"></script>
 
 </body>
 </html>
