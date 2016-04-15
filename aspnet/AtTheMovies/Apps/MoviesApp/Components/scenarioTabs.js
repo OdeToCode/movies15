@@ -9,7 +9,7 @@
             var fakeResults = [];
             for (var i = 1; i < 5; i++) {
                 var fakeAssets = [];
-                for (var j = 1; j < 10; j++) {
+                for (var j = 1; j < 100; j++) {
                     fakeAssets.push({
                         name: "Asset " + parseInt(Math.random() * 100),
                         amount: Math.random() * 10000
@@ -83,8 +83,8 @@
         },
         template: "<table class='table'>" +
                     "<tr ng-repeat='asset in $ctrl.assets'>" +
-                        "<td>{{asset.name}}</td>" +
-                        "<td>{{asset.amount | currency}}</td>" +
+                        "<td>{{::asset.name}}</td>" +
+                        "<td>{{::asset.amount | currency}}</td>" +
                     "</tr>" +
                   "</table>"
     });
