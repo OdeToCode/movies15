@@ -1,0 +1,11 @@
+﻿<h1>Tabs</h1>
+<div>
+    Settlement date: {{ $ctrl.settlementDate | date }}
+</div>
+<uib-tabset>
+    <uib-tab ng-repeat="tab in $ctrl.tabs" 
+             heading="{{tab.title}}" active="tab.active" disable="tab.disabled">
+        <asset-populated-assumptions-scenario assets="tab.assets">
+        </asset-populated-assumptions-scenario>
+    </uib-tab>
+</uib-tabset>

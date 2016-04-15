@@ -15,6 +15,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="#/list">List</a></li>
                 <li><a href="#/about">About</a></li>
+                <li><a href="#/scenarios">Scenario Tabs</a></li>
             </ul>
         </div>
     </div>
@@ -22,16 +23,14 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-10">
                 <div ng-view>
 
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-2">
 
-                {{ shell.counter }}
-                <button ng-click="doWork()">Do Work</button>
-
+               
             </div>
         </div>
 
@@ -39,6 +38,7 @@
 
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/ui-bootstrap-tpls-1.3.2.js"></script>
     <script src="Apps/MoviesApp/module.js"></script>
     <script src="Apps/MoviesApp/Controllers/MovieListController.js"></script>
     <script src="Apps/MoviesApp/Services/MovieRepository.js"></script>
@@ -46,6 +46,7 @@
     <script src="Apps/MoviesApp/Controllers/MovieDetailsController.js"></script>
     <script src="Apps/MoviesApp/Controllers/MovieEditController.js"></script>
     <script src="Apps/MoviesApp/Controllers/AboutController.js"></script>
+    <script src="Apps/MoviesApp/Components/scenarioTabs.js"></script>
 
 </body>
 </html>

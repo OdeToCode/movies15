@@ -1,5 +1,4 @@
-﻿var module = angular.module("moviesApp", ["ngRoute"]);
-
+﻿var module = angular.module("moviesApp", ["ngRoute", "ui.bootstrap"]);
 
 module.config(function ($routeProvider) {
     $routeProvider.when("/list",
@@ -24,7 +23,10 @@ module.config(function ($routeProvider) {
                     templateUrl: "/apps/moviesapp/templates/edit.html",
                     controller: "MovieEditController as edit"
                 })
-                  .otherwise({ redirectTo: "/list" });
+                .when("/scenarios", {
+                    template: "<scenario-tabs></scenario-tabs>",
+
+                }).otherwise({ redirectTo: "/list" });
 
 });
 
